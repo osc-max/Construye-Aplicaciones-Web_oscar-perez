@@ -27,22 +27,24 @@ section {
 }
 
 nav {
-  float: left;
-  width: 30%;
+   width: 100%;
   height: auto;
   background: #8B0000;
   padding: 20px;
 }
 
 nav ul {
-  list-style-type: none;
+ list-style-type: none;
   padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: space-around;
 }
 
 article {
   float: left;
   padding: 20px;
-  width: 70%;
+  width: 100%;
   background-color: #f1f1f1;
   height: auto;
 }
@@ -57,6 +59,7 @@ section::after {
   content: "";
   display: table;
   clear: both;
+  flex-direction: column;
 }
 
 footer {

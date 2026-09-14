@@ -22,9 +22,8 @@ header {
 }
 
 nav {
-  float: left;
-  width: 30%;
-  height: 300px;
+  width: 100%;
+  height: auto;
   background: #8B0000;
   padding: 20px;
 }
@@ -32,14 +31,16 @@ nav {
 nav ul {
   list-style-type: none;
   padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: space-around;
 }
 
 article {
-  float: left;
   padding: 20px;
-  width: 70%;
+  width: 100%;
   background-color: #f1f1f1;
-  height: 300px;
+  height: auto;
 }
 article img {
   max-width: 20%; 
@@ -52,6 +53,7 @@ section::after {
   content: "";
   display: table;
   clear: both;
+  flex-direction: column;
 }
 
 footer {
@@ -62,9 +64,10 @@ footer {
 }
 
 @media (max-width: 600px) {
-  nav, article {
-    width: 100%;
-    height: auto;
+  nav ul {
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
   }
 }
 </style>
