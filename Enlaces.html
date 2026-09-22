@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en"> <!-- Define la estructura del documento en idioma inglés -->
+<head>
+    <!-- Configuración para el soporte de caracteres globales y acentos -->
+    <meta charset="UTF-8">
+    <!-- Ajuste para adaptar la pantalla a dispositivos móviles -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Título de la pestaña del navegador -->
+    <title>Enlaces en HTML</title>
+</head>
+<body>
+    <h2>Tipos de enlaces en HTML</h2>
+    
+    <!-- Sección de enlaces internos (archivos dentro del mismo servidor o carpeta) -->
+    <p><strong>Enlaces/Hipervinculos a otra pagina del
+         mismo sitio.
+    </strong></p>
+    
+    <!-- Enlace interno simple (comportamiento por defecto) -->
+    <a href="1. Hola_mundo.html">1. Hola Mundo</a><br>
+    
+    <!-- target="_self": Abre el enlace en la misma pestaña/marco (opción por defecto) -->
+    <a href="2. Encabezados.html" target="_self">
+        2. Encabezados</a><br>
+        
+    <!-- target="_blank": Abre el enlace en una nueva pestaña o ventana -->
+    <a href="3. Parrafos.html" target="_blank">
+        3. Parrafos</a><br>
+        
+    <!-- target="_parent": Abre el enlace en el marco padre (útil si se usan iframes) -->
+    <a href="4. Salto de linea.html" target="_parent">
+        4. Salto de linea</a><br>
+        
+    <!-- target="_top": Cancela todos los marcos existentes y abre el enlace en la ventana completa -->
+    <a href="5. Enfatizado.html" target="_top">
+        5. Enfatizado</a><br>
+
+    <!-- Sección de enlaces externos (URLs completas hacia otros dominios web) -->
+    <p><strong>Enlaces/Hipervinculos a sitios externos
+    </strong></p>
+    
+    <!-- Enlace externo simple -->
+    <a href="https://www.google.com/">Google</a><br>
+    
+    <!-- Enlace externo en la misma pestaña -->
+    <a href="https://www.youtube.com/" target="_self">
+        YouTube</a><br>
+        
+    <!-- Enlace externo en una nueva pestaña (muy usado para no perder al usuario del sitio actual) -->
+    <a href="https://www.facebook.com/" target="_blank">
+        FaceBook</a><br>
+        
+    <!-- Enlace externo en el marco padre -->
+    <a href="https://www.wikipedia.com/" target="_parent">
+        WikiPedia</a><br>
+        
+    <!-- Enlace externo ocupando el cuerpo completo de la ventana -->
+    <a href="https://www.espanol.yahoo.com/" target="_top">
+        Yahoo!</a><br>
+</body>
+</html>

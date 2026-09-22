@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en"> <!-- Define la estructura del documento HTML5 en idioma inglés -->
+<head>
+    <!-- Configuración para la codificación de caracteres especiales y acentos -->
+    <meta charset="UTF-8">
+    <!-- Adaptación del diseño para pantallas de dispositivos móviles -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Título que aparece en la pestaña del navegador -->
+    <title>Tipos de listas en HTML</title>
+</head>
+<body>
+    <h1>Tipos de listas</h1>
+
+    <!-- Listas ordenadas (<ol>): Muestran elementos numerados o secuenciales -->
+    <h2>Listas ordenadas</h2>
+    <p>Una lista ordenada es una serie de elementos los cuales 
+        tendran una numeracion de acuerdo al numeros de elementos.
+    </p>
+    <ol> <!-- Contenedor de la lista ordenada -->
+        <li>Luna Arias </li>    <!-- Elemento de la lista (item) -->
+        <li>Franco Andrea</li>  <!-- Elemento de la lista (item) -->
+        <li>Granados Evelyn</li><!-- Elemento de la lista (item) -->
+    </ol>
+
+    <!-- Listas no ordenadas (<ul>): Muestran elementos mediante viñetas o puntos -->
+    <h2>Listas no ordenadas</h2>
+    <p>Las listas no ordenadas no utilizan ninguna numeracion delante 
+        de cada item sino un pequeño elemento grafico
+    </p>
+    <ul> <!-- Contenedor de la lista no ordenada -->
+        <li>C</li>     <!-- Elemento de viñeta -->
+        <li>C++</li>   <!-- Elemento de viñeta -->
+        <li>Python</li><!-- Elemento de viñeta -->
+    </ul>
+
+    <!-- Listas de descripción/definición (<dl>): Pares de términos y descripciones -->
+    <h2>Lista de definiciones</h2>
+    <p>Se utiliza para asociar un termino y la definicion del mismo</p>
+    <dl> <!-- Contenedor de la lista de descripción -->
+        
+        <!-- <dt> define el término / <dd> define la descripción asociada -->
+        <dt>C++</dt>
+        <dd>
+            Es un lenguaje de programacion, diseñado a mediados de los años
+            1980 como extension del lenguaje de programacion C.
+        </dd>
+
+        <dt>Java</dt>
+        <dd>
+            Es un lenguaje de programacion orientado a objetos desarrollado
+            por Sun Microsystem a principios de los 90.
+        </dd>
+
+        <dt>JavaScript</dt>
+        <dd>
+            Es un lenguaje interpretado, es decir que no requiere compilacion,
+            utilizado principalmente en paginas web, con una sintaxis similar
+            al lenguaje de programacion C.
+        </dd>
+    </dl>
+
+    <!-- Listas anidadas: Inclusión de una lista (<ul>) dentro de otra (<ol>) -->
+    <h2>Listas anidadas</h2>
+    <p>En HTML nos permite insertar una lista dentro de otra lista, se pueden
+        anidar diferentes tipos de lista de acuerdo al requerimiento
+    </p>
+    <ol> <!-- Lista principal ordenada -->
+        <li>Argentina
+            <ul> <!-- Lista secundaria no ordenada anidada dentro del primer <li> -->
+                <li>Buenos aires</li>
+                <li>La plata</li>
+                <li>Mendoza</li>
+            </ul>
+        </li>
+        <li>España
+            <ul> <!-- Lista secundaria no ordenada anidada dentro del segundo <li> -->
+                <li>Barcelona</li>
+                <li>Madrid</li>
+                <li>Sevilla</li>
+            </ul>
+        </li>
+        <li>Mexico
+            <ul> <!-- Lista secundaria no ordenada anidada dentro del tercer <li> -->
+                <li>Chihuahua</li>
+                <li>Cd. Juarez</li>
+                <li>Hermosillo</li>
+            </ul>
+        </li>
+    </ol>
+</body>
+</html>
