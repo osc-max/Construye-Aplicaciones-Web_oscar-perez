@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formularios en HTML</title>
+    <!-- Iconos para los botones -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+    <h1>Formularios</h1>
+    <p>Un formulario sirve para enviar datos al servidor[cite: 1].</p>
+    <p>El HTML solo hace la vista, otro lenguaje en el servidor procesa los datos (PHP, Node, etc.)[cite: 1].</p>
+
+
+    <!-- Formulario 1: Lo más básico con texto y botón de enviar -->
+    <h2>Ejemplo básico</h2>
+    <form action="" method="post">
+        Ingresa tu nombre:
+        <input type="text" name="nombre" size="20">
+        <br>
+        <input type="submit" value="enviar"> <!-- Botón para enviar -->
+    </form>
+
+
+    <!-- Formulario 2: Para contraseñas y limpiar campos -->
+    <h2>Formulario para contraseñas</h2>
+    <form action="" method="post">
+        Ingresa tu usuario:
+        <input type="text" name="usuario">
+        <br>
+        <!-- type="password" oculta lo que escribes con puntitos -->
+        Ingresa tu contraseña:
+        <input type="password" name="pass">
+        <br>
+        <input type="submit" value="enviar">
+        <input type="reset" value="borrar"> <!-- type="reset" borra lo que escribiste -->
+    </form>
+
+
+    <!-- Formulario 3: Para escribir textos largos (textarea) -->
+    <h2>Formulario con text area</h2>
+    <form action="" method="post">
+        Ingresa tu nombre:
+        <input type="text" name="nombre">
+        <br>
+        Ingresa tu correo:
+        <input type="email" name="correo">
+        <br>
+        <!-- textarea sirve para cuadros de texto de varias líneas -->
+        Ingresa tus comentarios:
+        <textarea name="comentarios" rows="5" cols="30"></textarea>
+        <br>
+        <input type="submit" value="enviar">
+        <input type="reset" value="borrar">
+    </form>
+
+
+    <!-- Formulario 4: Casillas de verificación (puedes marcar varias) -->
+    <h2>Formularios con checkbox</h2>
+    <form action="" method="post">
+        Ingresa tu nombre:
+        <input type="text" name="nombre">
+        <br>
+        Selecciona los lenguajes que conozcas:
+        <br>
+        <!-- Con checkbox puedes elegir más de una opción -->
+        <input type="checkbox" name="Java"> Java <br>
+        <input type="checkbox" name="Python"> Python <br>
+        <input type="checkbox" name="C#"> C# <br>
+        <input type="checkbox" name="Flutter"> Flutter <br>
+    </form>
+
+
+    <!-- Formulario 5: Botones redondos (solo puedes elegir UNA opción) -->
+    <h2>Formularios con Radiobotón</h2>
+    <form action="" method="post">
+        Ingresa tu nombre:
+        <input type="text" name="nombre">
+        <br>
+        Selecciona el máximo de estudios que tienes:
+        <br>
+        <!-- Como todos tienen name="estudios", solo te deja marcar uno -->
+        <input type="radio" name="estudios" value="1"> Sin estudios <br>
+        <input type="radio" name="estudios" value="2"> Primaria <br>
+        <input type="radio" name="estudios" value="3"> Secundaria <br>
+        <input type="radio" name="estudios" value="4"> Preparatoria <br>
+        <input type="submit" value="enviar">
+        <input type="reset" value="borrar">
+    </form>
+
+
+    <!-- Formulario 6: Menú desplegable -->
+    <h2>Formularios con selección</h2>
+    <form action="" method="post">
+        Ingresa tu nombre:
+        <input type="text" name="nombre">
+        <br>
+        Selecciona tu país:
+        <!-- select crea la lista desplegable y option da cada alternativa -->
+        <select name="pais">
+            <option value="1">Argentina</option>
+            <option value="2">España</option>
+            <option value="3">México</option>
+            <option value="4">Guatemala</option>
+            <option value="5">Honduras</option>
+            <option value="6">El Salvador</option>
+            <option value="7">Venezuela</option>
+            <option value="8">Colombia</option>
+        </select>
+        <br>
+        <input type="submit" value="enviar">
+        <input type="reset" value="borrar">
+    </form>
+
+
+    <!-- Formulario 7: Botones con texto e iconos adentro -->
+    <h2>Formulario con botones</h2>
+    <form action="" method="post">
+        Ingresa tu nombre:
+        <input type="text" name="nombre">
+        <br>
+        <!-- La etiqueta <button> permite meterle texto e iconos adentro -->
+        <button type="submit">Enviar <i class="fa-regular fa-paper-plane"></i></button>
+        <button type="reset">Borrar <i class="fa-solid fa-trash"></i></button>
+    </form>
+
+
+    <!-- Formulario 8: Subir archivos -->
+    <h2>Formulario con archivos</h2>
+    <form action="" method="post" enctype="multipart/form-data">
+        Ingresa tu nombre:
+        <input type="text" name="nombre">
+        <br>
+        <!-- type="file" abre la ventana para adjuntar archivos -->
+        <input type="file" name="archivo">
+        <br>
+        <button type="submit">Enviar <i class="fa-regular fa-paper-plane"></i></button>
+        <button type="reset">Borrar <i class="fa-solid fa-trash"></i></button>
+    </form>
+
+
+    <!-- Formulario 9: Datos invisibles que se envían al servidor -->
+    <h2>Formulario con campos ocultos</h2>
+    <form action="" method="post">
+        <!-- type="hidden" no se ve en la página pero sí se envía al servidor -->
+        <input type="hidden" name="hora" value="3:30">
+        Ingresa tu nombre:
+        <input type="text" name="nombre">
+        <br>
+        <button type="submit">Enviar <i class="fa-regular fa-paper-plane"></i></button>
+        <button type="reset">Borrar <i class="fa-solid fa-trash"></i></button>
+    </form>
+
+
+    <!-- Formulario 10: Agrupar campos con marquito y título -->
+    <h2>Formularios con agrupamiento</h2>
+    <form action="" method="post">
+        <!-- fieldset dibuja el marco alrededor de las preguntas -->
+        <fieldset>
+            <!-- legend pone el título del cuadro -->
+            <legend>Datos personales</legend>
+            Nombre y apellido:
+            <input type="text" name="nombre_apellido"><br>
+            Documento válido:
+            <input type="file" name="documento"><br>
+            Fecha de nacimiento:
+            <input type="date" name="fecha_nacimiento">
+        </fieldset>
+
+        <fieldset>
+            <legend>Datos de estudio:</legend>
+            Nombre de la escuela:
+            <input type="text" name="escuela"><br>
+            Certificado válido:
+            <input type="file" name="certificado"><br>
+            Fecha de egreso:
+            <input type="date" name="fecha_egreso">
+        </fieldset>
+        <br>
+        <button type="submit">Enviar <i class="fa-regular fa-paper-plane"></i></button>
+        <button type="reset">Borrar <i class="fa-solid fa-trash"></i></button>
+    </form>
+
+
+    <!-- Formulario 11: Campos bloqueados o con límites -->
+    <h2>Formulario con limitaciones</h2>
+    <form action="" method="post">
+        <!-- disabled no te deja escribir ni seleccionar nada -->
+        Ingresa tu nombre:
+        <input type="text" name="nombre" disabled><br>
+
+        <!-- maxlength="5" solo te deja escribir hasta 5 letras/números -->
+        Contraseña:
+        <input type="password" name="pass" maxlength="5"><br>
+
+        <!-- readonly te deja leer pero no modificar el texto -->
+        Comentarios:
+        <textarea name="comentarios" readonly>Este es mi comentario y no se puede borrar</textarea><br>
+    </form>
+
+</body>
+</html>
