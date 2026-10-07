@@ -1,4 +1,4 @@
-<<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="es">
 <head>
     <meta charset="UTF-8">
@@ -51,23 +51,34 @@
 
         .contenido {
             flex: 1;
-            max-width: 1000px;
+            max-width: 1100px;
             width: 100%;
             margin: 2rem auto;
             padding: 0 1rem;
+            
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1.5rem;
         }
 
         section {
-            margin-bottom: 2rem;
             padding: 1.5rem;
             background-color: #f7fafc;
             border-radius: 8px;
             border: 1px solid #e2e8f0;
+            text-align: center;
         }
 
         section h2 {
             margin-bottom: 0.8rem;
             color: #2b6cb0;
+            font-size: 1.1rem;
+        }
+
+        section img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 6px;
         }
 
         footer {
@@ -78,10 +89,19 @@
             margin-top: auto;
         }
 
-        @media (max-width: 600px) {
+        @media (max-width: 768px) {
+            .contenido {
+                grid-template-columns: repeat(2, 1fr); 
+            }
             nav ul {
                 flex-direction: column;
                 text-align: center;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .contenido {
+                grid-template-columns: 1fr; 
             }
         }
     </style>
@@ -98,7 +118,7 @@
         <ul>
             <li><a href="amazon.html">Inicio</a></li>
             <li><a href="registro.html">Registrate</a></li>
-            <li><a href="#">Servicios</a></li>
+            <li><a href="inicia sesion.html">Inicia Sesion</a></li>
             <li><a href="#">Contacto</a></li>
         </ul>
     </nav>
@@ -106,26 +126,22 @@
     <div class="contenido">
         <section>
             <h2>Imprescindibles para la cocina</h2>
-                 <img src="cocina.jpg" alt="articulos de cocina">
-
+            <img src="cocina.jpg" alt="articulos de cocina">
         </section>
 
         <section>
             <h2>Todo para tu belleza</h2>
             <img src="maquillaje.jpg" alt="articulos de belleza">
-
         </section>
 
         <section>
             <h2>Empieza a lucirte</h2>
             <img src="ropa.jpg" alt="ropa en venta">
-
         </section>
 
         <section>
             <h2>Juguetes para los mas pequeños</h2>
             <img src="juguetes.jpg" alt="juguetes infantiles">
-
         </section>
     </div>
 
