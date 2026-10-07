@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mi Sitio Web</title>
     <style>
-        /* Estilos básicos para la estructura */
         * {
             box-sizing: border-box;
             margin: 0;
@@ -21,7 +20,6 @@
             min-height: 100vh;
         }
 
-        /* 1. ENCABEZADO (HEADER) */
         header {
             background-color: #1a365d;
             color: white;
@@ -29,7 +27,6 @@
             text-align: center;
         }
 
-        /* 2. BARRA DE NAVEGACIÓN (NAV) */
         nav {
             background-color: #2b6cb0;
         }
@@ -52,7 +49,6 @@
             background-color: #2c5282;
         }
 
-        /* 3. CUERPO PRINCIPAL */
         .contenido {
             flex: 1;
             max-width: 1000px;
@@ -74,7 +70,6 @@
             color: #2b6cb0;
         }
 
-        /* 4. PIE DE PÁGINA (FOOTER) */
         footer {
             background-color: #1a202c;
             color: white;
@@ -83,7 +78,6 @@
             margin-top: auto;
         }
 
-        /* Adaptación para pantallas pequeñas */
         @media (max-width: 600px) {
             nav ul {
                 flex-direction: column;
@@ -94,14 +88,12 @@
 </head>
 <body>
 
-    <!-- 1. ENCABEZADO -->
     <header>
         <h1>Amazon</h1>
         <img src="logo.jpg" alt="logo de amazon">
         <p>Bienvenido a nuestra página web</p>
     </header>
 
-    <!-- 2. BARRA DE NAVEGACIÓN -->
     <nav>
         <ul>
             <li><a href="amazon.html">Inicio</a></li>
@@ -111,10 +103,8 @@
         </ul>
     </nav>
 
-    <!-- 3. CUERPO PRINCIPAL -->
     <div class="contenido">
 
-        <!-- FORMULARIO DE REGISTRO SENCILLO COMO EL DE LA IMAGEN -->
         <section>
             <h2>Regístrate</h2>
             <form action="" method="post">
@@ -139,12 +129,11 @@
                 <input type="password" name="pass">
                 <br>
                 <input type="submit" value="enviar">
-                <input type="reset" value="borrar"> <!-- type="reset" borra lo que escribiste -->
+                <input type="reset" value="borrar"> 
             </form>
         </section>
     </div>
 
-    <!-- 4. PIE DE PÁGINA (FOOTER) -->
     <footer>
        <p>Oscar Jahir Perez Munoz | 5°I | Programacion | 24308051280611</p>
     </footer>
