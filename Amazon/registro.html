@@ -125,140 +125,15 @@
                 Ingresa tu correo:
                 <br>
                 <input type="email" name="correo">
-                Aquí tienes tu código completo con el formulario de registro adaptado **exactamente a la sintaxis y estilo sencillo** de tu imagen (texto directo sin etiquetas `<label>`, uso de `<br>` e inputs de tipo `submit` y `reset` con sus comentarios):
-
-```html
-<!DOCTYPE html>
-<html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mi Sitio Web</title>
-    <style>
-        /* Estilos básicos para la estructura */
-        * {
-            box-sizing: border-box;
-            margin: 0;
-            padding: 0;
-        }
-
-        body {
-            font-family: Arial, sans-serif;
-            line-height: 1.6;
-            color: #333;
-            display: flex;
-            flex-direction: column;
-            min-height: 100vh;
-        }
-
-        /* 1. ENCABEZADO (HEADER) */
-        header {
-            background-color: #1a365d;
-            color: white;
-            padding: 2rem 1rem;
-            text-align: center;
-        }
-
-        /* 2. BARRA DE NAVEGACIÓN (NAV) */
-        nav {
-            background-color: #2b6cb0;
-        }
-
-        nav ul {
-            list-style: none;
-            display: flex;
-            justify-content: center;
-        }
-
-        nav ul li a {
-            color: white;
-            text-decoration: none;
-            padding: 1rem 1.5rem;
-            display: block;
-            transition: background 0.3s;
-        }
-
-        nav ul li a:hover {
-            background-color: #2c5282;
-        }
-
-        /* 3. CUERPO PRINCIPAL */
-        .contenido {
-            flex: 1;
-            max-width: 1000px;
-            width: 100%;
-            margin: 2rem auto;
-            padding: 0 1rem;
-        }
-
-        section {
-            margin-bottom: 2rem;
-            padding: 1.5rem;
-            background-color: #f7fafc;
-            border-radius: 8px;
-            border: 1px solid #e2e8f0;
-        }
-
-        section h2 {
-            margin-bottom: 0.8rem;
-            color: #2b6cb0;
-        }
-
-        /* 4. PIE DE PÁGINA (FOOTER) */
-        footer {
-            background-color: #1a202c;
-            color: white;
-            text-align: center;
-            padding: 1.5rem 1rem;
-            margin-top: auto;
-        }
-
-        /* Adaptación para pantallas pequeñas */
-        @media (max-width: 600px) {
-            nav ul {
-                flex-direction: column;
-                text-align: center;
-            }
-        }
-    </style>
-</head>
-<body>
-
-    <!-- 1. ENCABEZADO -->
-    <header>
-        <h1>Amazon</h1>
-        <img src="logo.jpg" alt="logo de amazon">
-        <p>Bienvenido a nuestra página web</p>
-    </header>
-
-    <!-- 2. BARRA DE NAVEGACIÓN -->
-    <nav>
-        <ul>
-            <li><a href="amazon.html">Inicio</a></li>
-            <li><a href="#">Registrate</a></li>
-            <li><a href="#">Servicios</a></li>
-            <li><a href="#">Contacto</a></li>
-        </ul>
-    </nav>
-
-    <!-- 3. CUERPO PRINCIPAL -->
-    <div class="contenido">
-
-        <!-- FORMULARIO DE REGISTRO SENCILLO COMO EL DE LA IMAGEN -->
-        <section>
-            <h2>Regístrate</h2>
-            <form action="" method="post">
-                Ingresa tu nombre:
-                <br>
-                <input type="text" name="nombre">
-                <br>
-                Ingresa tu correo:
-                <br>
-                <input type="email" name="correo">
                 <br>
                 Ingresa tu numero de celular:
                 <br>
                 <input type="text" name="numero">
+                <br> 
+                Ingresa tu domicilio:
+                <br>
+                <input type="text" name="domicilio">
+                <br> 
                 Ingresa tu contraseña:
                 <br>
                 <input type="password" name="pass">
@@ -266,26 +141,6 @@
                 <input type="submit" value="enviar">
                 <input type="reset" value="borrar"> <!-- type="reset" borra lo que escribiste -->
             </form>
-        </section>
-
-        <section>
-            <h2>Imprescindibles para la cocina</h2>
-            <img src="cocina.jpg" alt="articulos de cocina">
-        </section>
-
-        <section>
-            <h2>Todo para tu belleza</h2>
-            <img src="maquillaje.jpg" alt="articulos de belleza">
-        </section>
-
-        <section>
-            <h2>Empieza a lucirte</h2>
-            <img src="ropa.jpg" alt="ropa en venta">
-        </section>
-
-        <section>
-            <h2>Juguetes para los mas pequeños</h2>
-            <img src="juguetes.jpg" alt="juguetes infantiles">
         </section>
     </div>
 
@@ -297,22 +152,3 @@
 </body>
 </html>
 
-                <br>
-                Ingresa tu contraseña:
-                <br>
-                <input type="password" name="pass">
-                <br>
-                <input type="submit" value="enviar">
-                <input type="reset" value="borrar"> <!-- type="reset" borra lo que escribiste -->
-            </form>
-        </section>
-
-    </div>
-
-    <!-- 4. PIE DE PÁGINA (FOOTER) -->
-    <footer>
-       <p>Oscar Jahir Perez Munoz | 5°I | Programacion | 24308051280611</p>
-    </footer>
-
-</body>
-</html>
