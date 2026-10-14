@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cinépolis - Club Cinépolis</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: Arial, sans-serif; }
+        body { background-color: #f4f4f4; text-align: center; }
+
+        .navbar { background: #0b2341; padding: 15px; display: flex; justify-content: space-between; align-items: center; }
+        .logo { color: #ffcc00; font-size: 22px; font-weight: bold; text-decoration: none; }
+        .nav-links a { color: white; text-decoration: none; margin-left: 15px; font-weight: bold; }
+
+        .login-card { background: white; max-width: 350px; margin: 40px auto; padding: 25px; border-radius: 8px; box-shadow: 0 2px 5px rgba(0,0,0,0.2); }
+        .login-card h2 { color: #0b2341; margin-bottom: 15px; }
+        .login-card input { width: 100%; padding: 10px; margin: 8px 0; border: 1px solid #ccc; border-radius: 4px; }
+        .login-card button { background: #0b2341; color: white; border: none; padding: 10px; width: 100%; border-radius: 4px; cursor: pointer; font-weight: bold; margin-top: 10px; }
+
+        footer { background: #0b2341; color: white; padding: 15px; margin-top: 40px; font-size: 14px; }
+    </style>
+</head>
+<body>
+
+    <nav class="navbar">
+        <a href="index.html" class="logo">Cinépolis</a>
+        <div class="nav-links">
+            <a href="index.html">Volver al Inicio</a>
+        </div>
+    </nav>
+
+    <div class="login-card">
+        <h2>Club Cinépolis</h2>
+        <form>
+            <input type="text" placeholder="N° Tarjeta Club Cinépolis" required>
+            <input type="email" placeholder="Correo Electrónico" required>
+            <input type="password" placeholder="Contraseña" required>
+            <button type="submit">Ingresar</button>
+        </form>
+    </div>
+
+    <footer>
+        <p>Oscar Jahir Perez Munoz | 5°I | Programacion | 24308051280611</p>
+    </footer>
+
+</body>
+</html>
