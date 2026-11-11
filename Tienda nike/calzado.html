@@ -1,3 +1,6 @@
+<?php
+session_start();
+?>
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -11,9 +14,10 @@
         <h1>NIKE STORE</h1>
         <nav>
             <a href="index.html">Inicio</a>
-            <a href="calzado.html">Calzado</a>
+            <a href="calzado.php">Calzado</a>
             <a href="ropa.html">Ropa</a>
             <a href="accesorios.html">Accesorios</a>
+            <a href="carrito.php">Carrito</a>
             <a href="login.php">Cuenta / Login</a>
         </nav>
     </header>
@@ -21,23 +25,134 @@
     <main class="contenido">
         <h2>Sección: Calzado Deportivo</h2>
         <div class="grid-productos">
-           <div class="tarjeta"><h3>Nike Air Force 1</h3><img src="air1.jpg" alt="tenis" style="width: 250px; height: auto;"><p class="precio">$110.00</p><button class="btn-comprar">Ver Detalle</button></div>
-            <div class="tarjeta"><h3>Nike Air Max 270</h3><img src="270.jpg" alt="tenis" style="width: 250px; height: auto;"><p class="precio">$150.00</p><button class="btn-comprar">Ver Detalle</button></div>
-            <div class="tarjeta"><h3>Nike Dunk Low</h3><img src="dunk.jpg" alt="tenis" style="width: 250px; height: auto;"><p class="precio">$115.00</p><button class="btn-comprar">Ver Detalle</button></div>
-            <div class="tarjeta"><h3>Nike Pegasus 40</h3><img src="pegasus.jpg" alt="tenis" style="width: 250px; height: auto;"><p class="precio">$130.00</p><button class="btn-comprar">Ver Detalle</button></div>
-            <div class="tarjeta"><h3>Nike Revolution 6</h3><img src="revolution.jpg" alt="tenis" style="width: 250px; height: auto;"><p class="precio">$70.00</p><button class="btn-comprar">Ver Detalle</button></div>
-            <div class="tarjeta"><h3>Nike Blazer Mid 77</h3><img src="blazer.jpg" alt="tenis" style="width: 250px; height: auto;"><p class="precio">$105.00</p><button class="btn-comprar">Ver Detalle</button></div>
-            <div class="tarjeta"><h3>Nike ZoomX Vaporfly</h3><img src="zoom.jpg" alt="tenis" style="width: 250px; height: auto;"><p class="precio">$250.00</p><button class="btn-comprar">Ver Detalle</button></div>
-            <div class="tarjeta"><h3>Nike Court Vision</h3><img src="vision.jpg" alt="tenis" style="width: 250px; height: auto;"><p class="precio">$80.00</p><button class="btn-comprar">Ver Detalle</button></div>
-            <div class="tarjeta"><h3>Nike Metcon 9</h3><img src="metcon.jpg" alt="tenis" style="width: 250px; height: auto;"><p class="precio">$140.00</p><button class="btn-comprar">Ver Detalle</button></div>
-            <div class="tarjeta"><h3>Nike Air Max 90</h3><img src="90.jpg" alt="tenis" style="width: 250px; height: auto;"><p class="precio">$130.00</p><button class="btn-comprar">Ver Detalle</button></div>
+            
+            <div class="tarjeta">
+                <h3>Nike Air Force 1</h3>
+                <img src="air1.jpg" alt="tenis" style="width: 250px; height: auto;">
+                <p class="precio">$110.00</p>
+                <form action="agregar_carrito.php" method="POST">
+                    <input type="hidden" name="nombre" value="Nike Air Force 1">
+                    <input type="hidden" name="precio" value="110.00">
+                    <input type="hidden" name="imagen" value="air1.jpg">
+                    <button type="submit" class="btn-comprar">Agregar al Carrito</button>
+                </form>
+            </div>
+
+            <div class="tarjeta">
+                <h3>Nike Air Max 270</h3>
+                <img src="270.jpg" alt="tenis" style="width: 250px; height: auto;">
+                <p class="precio">$150.00</p>
+                <form action="agregar_carrito.php" method="POST">
+                    <input type="hidden" name="nombre" value="Nike Air Max 270">
+                    <input type="hidden" name="precio" value="150.00">
+                    <input type="hidden" name="imagen" value="270.jpg">
+                    <button type="submit" class="btn-comprar">Agregar al Carrito</button>
+                </form>
+            </div>
+
+            <div class="tarjeta">
+                <h3>Nike Dunk Low</h3>
+                <img src="dunk.jpg" alt="tenis" style="width: 250px; height: auto;">
+                <p class="precio">$115.00</p>
+                <form action="agregar_carrito.php" method="POST">
+                    <input type="hidden" name="nombre" value="Nike Dunk Low">
+                    <input type="hidden" name="precio" value="115.00">
+                    <input type="hidden" name="imagen" value="dunk.jpg">
+                    <button type="submit" class="btn-comprar">Agregar al Carrito</button>
+                </form>
+            </div>
+
+            <div class="tarjeta">
+                <h3>Nike Pegasus 40</h3>
+                <img src="pegasus.jpg" alt="tenis" style="width: 250px; height: auto;">
+                <p class="precio">$130.00</p>
+                <form action="agregar_carrito.php" method="POST">
+                    <input type="hidden" name="nombre" value="Nike Pegasus 40">
+                    <input type="hidden" name="precio" value="130.00">
+                    <input type="hidden" name="imagen" value="pegasus.jpg">
+                    <button type="submit" class="btn-comprar">Agregar al Carrito</button>
+                </form>
+            </div>
+
+            <div class="tarjeta">
+                <h3>Nike Revolution 6</h3>
+                <img src="revolution.jpg" alt="tenis" style="width: 250px; height: auto;">
+                <p class="precio">$70.00</p>
+                <form action="agregar_carrito.php" method="POST">
+                    <input type="hidden" name="nombre" value="Nike Revolution 6">
+                    <input type="hidden" name="precio" value="70.00">
+                    <input type="hidden" name="imagen" value="revolution.jpg">
+                    <button type="submit" class="btn-comprar">Agregar al Carrito</button>
+                </form>
+            </div>
+
+            <div class="tarjeta">
+                <h3>Nike Blazer Mid 77</h3>
+                <img src="blazer.jpg" alt="tenis" style="width: 250px; height: auto;">
+                <p class="precio">$105.00</p>
+                <form action="agregar_carrito.php" method="POST">
+                    <input type="hidden" name="nombre" value="Nike Blazer Mid 77">
+                    <input type="hidden" name="precio" value="105.00">
+                    <input type="hidden" name="imagen" value="blazer.jpg">
+                    <button type="submit" class="btn-comprar">Agregar al Carrito</button>
+                </form>
+            </div>
+
+            <div class="tarjeta">
+                <h3>Nike ZoomX Vaporfly</h3>
+                <img src="zoom.jpg" alt="tenis" style="width: 250px; height: auto;">
+                <p class="precio">$250.00</p>
+                <form action="agregar_carrito.php" method="POST">
+                    <input type="hidden" name="nombre" value="Nike ZoomX Vaporfly">
+                    <input type="hidden" name="precio" value="250.00">
+                    <input type="hidden" name="imagen" value="zoom.jpg">
+                    <button type="submit" class="btn-comprar">Agregar al Carrito</button>
+                </form>
+            </div>
+
+            <div class="tarjeta">
+                <h3>Nike Court Vision</h3>
+                <img src="vision.jpg" alt="tenis" style="width: 250px; height: auto;">
+                <p class="precio">$80.00</p>
+                <form action="agregar_carrito.php" method="POST">
+                    <input type="hidden" name="nombre" value="Nike Court Vision">
+                    <input type="hidden" name="precio" value="80.00">
+                    <input type="hidden" name="imagen" value="vision.jpg">
+                    <button type="submit" class="btn-comprar">Agregar al Carrito</button>
+                </form>
+            </div>
+
+            <div class="tarjeta">
+                <h3>Nike Metcon 9</h3>
+                <img src="metcon.jpg" alt="tenis" style="width: 250px; height: auto;">
+                <p class="precio">$140.00</p>
+                <form action="agregar_carrito.php" method="POST">
+                    <input type="hidden" name="nombre" value="Nike Metcon 9">
+                    <input type="hidden" name="precio" value="140.00">
+                    <input type="hidden" name="imagen" value="metcon.jpg">
+                    <button type="submit" class="btn-comprar">Agregar al Carrito</button>
+                </form>
+            </div>
+
+            <div class="tarjeta">
+                <h3>Nike Air Max 90</h3>
+                <img src="90.jpg" alt="tenis" style="width: 250px; height: auto;">
+                <p class="precio">$130.00</p>
+                <form action="agregar_carrito.php" method="POST">
+                    <input type="hidden" name="nombre" value="Nike Air Max 90">
+                    <input type="hidden" name="precio" value="130.00">
+                    <input type="hidden" name="imagen" value="90.jpg">
+                    <button type="submit" class="btn-comprar">Agregar al Carrito</button>
+                </form>
+            </div>
+
         </div>
     </main>
 
     <footer>
-          <p><strong>Desarrollado por:</strong> Oscar Jahir Perez Munoz</p>
+        <p><strong>Desarrollado por:</strong> Oscar Jahir Perez Munoz</p>
         <p><strong>Grupo:</strong> 5°I</p>
-        <p><strong>No. Control</strong> 0611</p>
+        <p><strong>No. Control:</strong> 0611</p>
     </footer>
 
 </body>

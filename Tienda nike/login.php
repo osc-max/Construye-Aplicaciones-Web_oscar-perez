@@ -1,4 +1,5 @@
 <?php
+session_start();
 include 'conexion.php';
 $mensaje = "";
 
@@ -21,6 +22,10 @@ if (isset($_POST['btn_login'])) {
 
     $result = $conn->query("SELECT * FROM usuarios WHERE email = '$email' AND password = '$password'");
     if ($result && $user = $result->fetch_assoc()) {
+        // GUARDAMOS LA SESIÓN
+        $_SESSION['usuario_id'] = $user['id'];
+        $_SESSION['usuario_nombre'] = $user['nombre'];
+
         $usuario_logeado = $user['nombre'];
         $productos = $conn->query("SELECT * FROM productos");
         ?>
@@ -29,22 +34,31 @@ if (isset($_POST['btn_login'])) {
         <head>
             <meta charset="UTF-8">
             <title>Catálogo Nike</title>
+            <link rel="stylesheet" href="estilo.css">
             <style>
                 body { font-family: Arial, sans-serif; margin: 0; background: #fafafa; }
                 header { background: #000; color: white; padding: 15px 30px; display: flex; justify-content: space-between; align-items: center; }
-                a.salir { color: #ff5555; text-decoration: none; font-weight: bold; }
+                header nav a { color: white; margin: 0 10px; text-decoration: none; font-weight: bold; }
+                a.salir { color: #ff5555; text-decoration: none; font-weight: bold; margin-left: 15px; }
                 .grid { display: flex; flex-wrap: wrap; gap: 20px; padding: 30px; justify-content: center; }
                 .tarjeta { background: white; border: 1px solid #ddd; width: 220px; padding: 15px; border-radius: 8px; text-align: center; }
                 .precio { color: #111; font-weight: bold; font-size: 1.2em; }
-                .btn-comprar { background: #000; color: white; border: none; padding: 8px 15px; border-radius: 4px; cursor: pointer; }
+                .btn-comprar { background: #000; color: white; border: none; padding: 8px 15px; border-radius: 4px; cursor: pointer; width: 100%; }
             </style>
         </head>
         <body>
             <header>
                 <h1>NIKE STORE</h1>
+                <nav>
+                    <a href="index.html">Inicio</a>
+                    <a href="calzado.php">Calzado</a>
+                    <a href="ropa.php">Ropa</a>
+                    <a href="accesorios.php">Accesorios</a>
+                    <a href="carrito.php">Carrito </a>
+                </nav>
                 <div>
-                    Hola, <b><?php echo $usuario_logeado; ?></b> | 
-                    <a href="login.php" class="salir">Cerrar Sesión</a>
+                    Hola, <b><?php echo htmlspecialchars($usuario_logeado); ?></b> | 
+                    <a href="logout.php" class="salir">Cerrar Sesión</a>
                 </div>
             </header>
 
@@ -53,10 +67,17 @@ if (isset($_POST['btn_login'])) {
             <div class="grid">
                 <?php while($p = $productos->fetch_assoc()): ?>
                     <div class="tarjeta">
-                        <h3><?php echo $p['nombre']; ?></h3>
-                        <p>Categoría: <?php echo $p['categoria']; ?></p>
+                        <h3><?php echo htmlspecialchars($p['nombre']); ?></h3>
+                        <p>Categoría: <?php echo htmlspecialchars($p['categoria']); ?></p>
                         <p class="precio">$<?php echo number_format($p['precio'], 2); ?></p>
-                        <button class="btn-comprar">Comprar</button>
+                        
+                        <!-- FORMULARIO PARA AGREGAR DIRECTO AL CARRITO -->
+                        <form action="agregar_carrito.php" method="POST">
+                            <input type="hidden" name="nombre" value="<?php echo htmlspecialchars($p['nombre']); ?>">
+                            <input type="hidden" name="precio" value="<?php echo $p['precio']; ?>">
+                            <input type="hidden" name="imagen" value="<?php echo isset($p['imagen']) ? $p['imagen'] : 'default.jpg'; ?>">
+                            <button type="submit" class="btn-comprar">Agregar al Carrito</button>
+                        </form>
                     </div>
                 <?php endwhile; ?>
             </div>
@@ -104,7 +125,8 @@ if (isset($_POST['btn_login'])) {
             <button type="submit" name="btn_registro">Crear Cuenta</button>
         </form>
     </div>
- <footer>
+
+    <footer>
         <p>Oscar Jahir Perez Munoz | 5°I | Programacion | 24308051280611</p>
     </footer>
 </body>

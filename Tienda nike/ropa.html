@@ -11,9 +11,10 @@
         <h1>NIKE STORE</h1>
         <nav>
             <a href="index.html">Inicio</a>
-            <a href="calzado.html">Calzado</a>
-            <a href="ropa.html">Ropa</a>
+            <a href="calzado.php">Calzado</a>
+            <a href="ropa.php">Ropa</a>
             <a href="accesorios.html">Accesorios</a>
+            <a href="carrito.php">Carrito </a>
             <a href="login.php">Cuenta / Login</a>
         </nav>
     </header>
@@ -21,23 +22,134 @@
     <main class="contenido">
         <h2>Sección: Ropa Deportiva</h2>
         <div class="grid-productos">
-            <div class="tarjeta"><h3>Sudadera Club Fleece</h3><img src="fleece.jpg" alt="ropa" style="width: 250px; height: auto;"><p class="precio">$65.00</p><button class="btn-comprar">Ver Detalle</button></div>
-            <div class="tarjeta"><h3>Playera Dri-FIT Ready</h3><img src="playera.jpg" alt="ropa" style="width: 250px; height: auto;"><p class="precio">$35.00</p><button class="btn-comprar">Ver Detalle</button></div>
-            <div class="tarjeta"><h3>Pantalón Jogging Sportswear</h3><img src="pantalon.jpg" alt="ropa" style="width: 250px; height: auto;"><p class="precio">$75.00</p><button class="btn-comprar">Ver Detalle</button></div>
-            <div class="tarjeta"><h3>Chamarra Windrunner</h3><img src="chamarra.jpg" alt="ropa" style="width: 250px; height: auto;"><p class="precio">$110.00</p><button class="btn-comprar">Ver Detalle</button></div>
-            <div class="tarjeta"><h3>Shorts Nike Pro</h3><img src="short.jpg" alt="ropa" style="width: 250px; height: auto;"><p class="precio">$30.00</p><button class="btn-comprar">Ver Detalle</button></div>
-            <div class="tarjeta"><h3>Playera Graphic Tee</h3><img src="playera2.jpg" alt="ropa" style="width: 250px; height: auto;"><p class="precio">$28.00</p><button class="btn-comprar">Ver Detalle</button></div>
-            <div class="tarjeta"><h3>Sudadera con Gorro Therma</h3><img src="therma.jpg" alt="ropa" style="width: 250px; height: auto;"><p class="precio">$70.00</p><button class="btn-comprar">Ver Detalle</button></div>
-            <div class="tarjeta"><h3>Malla Dri-FIT Challenger</h3><img src="malla.jpg" alt="ropa" style="width: 250px; height: auto;"><p class="precio">$55.00</p><button class="btn-comprar">Ver Detalle</button></div>
-            <div class="tarjeta"><h3>Chamarra Puffer Essential</h3><img src="puffer.jpg" alt="ropa" style="width: 250px; height: auto;"><p class="precio">$140.00</p><button class="btn-comprar">Ver Detalle</button></div>
-            <div class="tarjeta"><h3>Playera Tank Top Fitness</h3><img src="tank.jpg" alt="ropa" style="width: 250px; height: auto;"><p class="precio">$25.00</p><button class="btn-comprar">Ver Detalle</button></div>
+
+            <div class="tarjeta">
+                <h3>Sudadera Club Fleece</h3>
+                <img src="fleece.jpg" alt="ropa" style="width: 250px; height: auto;">
+                <p class="precio">$65.00</p>
+                <form action="agregar_carrito.php" method="POST">
+                    <input type="hidden" name="nombre" value="Sudadera Club Fleece">
+                    <input type="hidden" name="precio" value="65.00">
+                    <input type="hidden" name="imagen" value="fleece.jpg">
+                    <button type="submit" class="btn-comprar">Agregar al Carrito</button>
+                </form>
+            </div>
+
+            <div class="tarjeta">
+                <h3>Playera Dri-FIT Ready</h3>
+                <img src="playera.jpg" alt="ropa" style="width: 250px; height: auto;">
+                <p class="precio">$35.00</p>
+                <form action="agregar_carrito.php" method="POST">
+                    <input type="hidden" name="nombre" value="Playera Dri-FIT Ready">
+                    <input type="hidden" name="precio" value="35.00">
+                    <input type="hidden" name="imagen" value="playera.jpg">
+                    <button type="submit" class="btn-comprar">Agregar al Carrito</button>
+                </form>
+            </div>
+
+            <div class="tarjeta">
+                <h3>Pantalón Jogging Sportswear</h3>
+                <img src="pantalon.jpg" alt="ropa" style="width: 250px; height: auto;">
+                <p class="precio">$75.00</p>
+                <form action="agregar_carrito.php" method="POST">
+                    <input type="hidden" name="nombre" value="Pantalón Jogging Sportswear">
+                    <input type="hidden" name="precio" value="75.00">
+                    <input type="hidden" name="imagen" value="pantalon.jpg">
+                    <button type="submit" class="btn-comprar">Agregar al Carrito</button>
+                </form>
+            </div>
+
+            <div class="tarjeta">
+                <h3>Chamarra Windrunner</h3>
+                <img src="chamarra.jpg" alt="ropa" style="width: 250px; height: auto;">
+                <p class="precio">$110.00</p>
+                <form action="agregar_carrito.php" method="POST">
+                    <input type="hidden" name="nombre" value="Chamarra Windrunner">
+                    <input type="hidden" name="precio" value="110.00">
+                    <input type="hidden" name="imagen" value="chamarra.jpg">
+                    <button type="submit" class="btn-comprar">Agregar al Carrito</button>
+                </form>
+            </div>
+
+            <div class="tarjeta">
+                <h3>Shorts Nike Pro</h3>
+                <img src="short.jpg" alt="ropa" style="width: 250px; height: auto;">
+                <p class="precio">$30.00</p>
+                <form action="agregar_carrito.php" method="POST">
+                    <input type="hidden" name="nombre" value="Shorts Nike Pro">
+                    <input type="hidden" name="precio" value="30.00">
+                    <input type="hidden" name="imagen" value="short.jpg">
+                    <button type="submit" class="btn-comprar">Agregar al Carrito</button>
+                </form>
+            </div>
+
+            <div class="tarjeta">
+                <h3>Playera Graphic Tee</h3>
+                <img src="playera2.jpg" alt="ropa" style="width: 250px; height: auto;">
+                <p class="precio">$28.00</p>
+                <form action="agregar_carrito.php" method="POST">
+                    <input type="hidden" name="nombre" value="Playera Graphic Tee">
+                    <input type="hidden" name="precio" value="28.00">
+                    <input type="hidden" name="imagen" value="playera2.jpg">
+                    <button type="submit" class="btn-comprar">Agregar al Carrito</button>
+                </form>
+            </div>
+
+            <div class="tarjeta">
+                <h3>Sudadera con Gorro Therma</h3>
+                <img src="therma.jpg" alt="ropa" style="width: 250px; height: auto;">
+                <p class="precio">$70.00</p>
+                <form action="agregar_carrito.php" method="POST">
+                    <input type="hidden" name="nombre" value="Sudadera con Gorro Therma">
+                    <input type="hidden" name="precio" value="70.00">
+                    <input type="hidden" name="imagen" value="therma.jpg">
+                    <button type="submit" class="btn-comprar">Agregar al Carrito</button>
+                </form>
+            </div>
+
+            <div class="tarjeta">
+                <h3>Malla Dri-FIT Challenger</h3>
+                <img src="malla.jpg" alt="ropa" style="width: 250px; height: auto;">
+                <p class="precio">$55.00</p>
+                <form action="agregar_carrito.php" method="POST">
+                    <input type="hidden" name="nombre" value="Malla Dri-FIT Challenger">
+                    <input type="hidden" name="precio" value="55.00">
+                    <input type="hidden" name="imagen" value="malla.jpg">
+                    <button type="submit" class="btn-comprar">Agregar al Carrito</button>
+                </form>
+            </div>
+
+            <div class="tarjeta">
+                <h3>Chamarra Puffer Essential</h3>
+                <img src="puffer.jpg" alt="ropa" style="width: 250px; height: auto;">
+                <p class="precio">$140.00</p>
+                <form action="agregar_carrito.php" method="POST">
+                    <input type="hidden" name="nombre" value="Chamarra Puffer Essential">
+                    <input type="hidden" name="precio" value="140.00">
+                    <input type="hidden" name="imagen" value="puffer.jpg">
+                    <button type="submit" class="btn-comprar">Agregar al Carrito</button>
+                </form>
+            </div>
+
+            <div class="tarjeta">
+                <h3>Playera Tank Top Fitness</h3>
+                <img src="tank.jpg" alt="ropa" style="width: 250px; height: auto;">
+                <p class="precio">$25.00</p>
+                <form action="agregar_carrito.php" method="POST">
+                    <input type="hidden" name="nombre" value="Playera Tank Top Fitness">
+                    <input type="hidden" name="precio" value="25.00">
+                    <input type="hidden" name="imagen" value="tank.jpg">
+                    <button type="submit" class="btn-comprar">Agregar al Carrito</button>
+                </form>
+            </div>
+
         </div>
     </main>
 
     <footer>
-          <p><strong>Desarrollado por:</strong> Oscar Jahir Perez Munoz</p>
+        <p><strong>Desarrollado por:</strong> Oscar Jahir Perez Munoz</p>
         <p><strong>Grupo:</strong> 5°I</p>
-        <p><strong>No. Control</strong> 0611</p>
+        <p><strong>No. Control:</strong> 0611</p>
     </footer>
 
 </body>

@@ -11,9 +11,10 @@
         <h1>NIKE STORE</h1>
         <nav>
             <a href="index.html">Inicio</a>
-            <a href="calzado.html">Calzado</a>
-            <a href="ropa.html">Ropa</a>
-            <a href="accesorios.html">Accesorios</a>
+            <a href="calzado.php">Calzado</a>
+            <a href="ropa.php">Ropa</a>
+            <a href="accesorios.php">Accesorios</a>
+            <a href="carrito.php">Carrito </a>
             <a href="login.php">Cuenta / Login</a>
         </nav>
     </header>
@@ -21,23 +22,134 @@
     <main class="contenido">
         <h2>Sección: Accesorios</h2>
         <div class="grid-productos">
-            <div class="tarjeta"><h3>Mochila Brasilia</h3><img src="brasilia.jpg" alt="accesorio" style="width: 250px; height: auto;"><p class="precio">$45.00</p><button class="btn-comprar">Ver Detalle</button></div>
-            <div class="tarjeta"><h3>Gorra Club Unstructured</h3><img src="gorra.jpg" alt="accesorio" style="width: 250px; height: auto;"><p class="precio">$25.00</p><button class="btn-comprar">Ver Detalle</button></div>
-            <div class="tarjeta"><h3>Calcetines Everyday (3 Pares)</h3><img src="calcetas.jpg" alt="accesorio" style="width: 250px; height: auto;"><p class="precio">$18.00</p><button class="btn-comprar">Ver Detalle</button></div>
-            <div class="tarjeta"><h3>Cangurera Heritage</h3><img src="cangurera.jpg" alt="accesorio" style="width: 250px; height: auto;"><p class="precio">$30.00</p><button class="btn-comprar">Ver Detalle</button></div>
-            <div class="tarjeta"><h3>Botella de Agua HyperCharge</h3><img src="agua.jpg" alt="accesorio" style="width: 250px; height: auto;"><p class="precio">$20.00</p><button class="btn-comprar">Ver Detalle</button></div>
-            <div class="tarjeta"><h3>Guantes de Gimnasio Ultimate</h3><img src="guante.jpg" alt="accesorio" style="width: 250px; height: auto;"><p class="precio">$22.00</p><button class="btn-comprar">Ver Detalle</button></div>
-            <div class="tarjeta"><h3>Mochila de Cuerdas Hayward</h3><img src="mochila.jpg" alt="accesorio" style="width: 250px; height: auto;"><p class="precio">$28.00</p><button class="btn-comprar">Ver Detalle</button></div>
-            <div class="tarjeta"><h3>Banda para Cabeza Swoosh</h3><img src="banda.jpg" alt="accesorio" style="width: 250px; height: auto;"><p class="precio">$12.00</p><button class="btn-comprar">Ver Detalle</button></div>
-            <div class="tarjeta"><h3>Cinta Deportiva Pro</h3><img src="banda2.jpg" alt="accesorio" style="width: 250px; height: auto;"><p class="precio">$15.00</p><button class="btn-comprar">Ver Detalle</button></div>
-            <div class="tarjeta"><h3>Maletín de Gimnasio Utility</h3><img src="maleta.jpg" alt="accesorio" style="width: 250px; height: auto;"><p class="precio">$60.00</p><button class="btn-comprar">Ver Detalle</button></div>
+
+            <div class="tarjeta">
+                <h3>Mochila Brasilia</h3>
+                <img src="brasilia.jpg" alt="accesorio" style="width: 250px; height: auto;">
+                <p class="precio">$45.00</p>
+                <form action="agregar_carrito.php" method="POST">
+                    <input type="hidden" name="nombre" value="Mochila Brasilia">
+                    <input type="hidden" name="precio" value="45.00">
+                    <input type="hidden" name="imagen" value="brasilia.jpg">
+                    <button type="submit" class="btn-comprar">Agregar al Carrito</button>
+                </form>
+            </div>
+
+            <div class="tarjeta">
+                <h3>Gorra Club Unstructured</h3>
+                <img src="gorra.jpg" alt="accesorio" style="width: 250px; height: auto;">
+                <p class="precio">$25.00</p>
+                <form action="agregar_carrito.php" method="POST">
+                    <input type="hidden" name="nombre" value="Gorra Club Unstructured">
+                    <input type="hidden" name="precio" value="25.00">
+                    <input type="hidden" name="imagen" value="gorra.jpg">
+                    <button type="submit" class="btn-comprar">Agregar al Carrito</button>
+                </form>
+            </div>
+
+            <div class="tarjeta">
+                <h3>Calcetines Everyday (3 Pares)</h3>
+                <img src="calcetas.jpg" alt="accesorio" style="width: 250px; height: auto;">
+                <p class="precio">$18.00</p>
+                <form action="agregar_carrito.php" method="POST">
+                    <input type="hidden" name="nombre" value="Calcetines Everyday (3 Pares)">
+                    <input type="hidden" name="precio" value="18.00">
+                    <input type="hidden" name="imagen" value="calcetas.jpg">
+                    <button type="submit" class="btn-comprar">Agregar al Carrito</button>
+                </form>
+            </div>
+
+            <div class="tarjeta">
+                <h3>Cangurera Heritage</h3>
+                <img src="cangurera.jpg" alt="accesorio" style="width: 250px; height: auto;">
+                <p class="precio">$30.00</p>
+                <form action="agregar_carrito.php" method="POST">
+                    <input type="hidden" name="nombre" value="Cangurera Heritage">
+                    <input type="hidden" name="precio" value="30.00">
+                    <input type="hidden" name="imagen" value="cangurera.jpg">
+                    <button type="submit" class="btn-comprar">Agregar al Carrito</button>
+                </form>
+            </div>
+
+            <div class="tarjeta">
+                <h3>Botella de Agua HyperCharge</h3>
+                <img src="agua.jpg" alt="accesorio" style="width: 250px; height: auto;">
+                <p class="precio">$20.00</p>
+                <form action="agregar_carrito.php" method="POST">
+                    <input type="hidden" name="nombre" value="Botella de Agua HyperCharge">
+                    <input type="hidden" name="precio" value="20.00">
+                    <input type="hidden" name="imagen" value="agua.jpg">
+                    <button type="submit" class="btn-comprar">Agregar al Carrito</button>
+                </form>
+            </div>
+
+            <div class="tarjeta">
+                <h3>Guantes de Gimnasio Ultimate</h3>
+                <img src="guante.jpg" alt="accesorio" style="width: 250px; height: auto;">
+                <p class="precio">$22.00</p>
+                <form action="agregar_carrito.php" method="POST">
+                    <input type="hidden" name="nombre" value="Guantes de Gimnasio Ultimate">
+                    <input type="hidden" name="precio" value="22.00">
+                    <input type="hidden" name="imagen" value="guante.jpg">
+                    <button type="submit" class="btn-comprar">Agregar al Carrito</button>
+                </form>
+            </div>
+
+            <div class="tarjeta">
+                <h3>Mochila de Cuerdas Hayward</h3>
+                <img src="mochila.jpg" alt="accesorio" style="width: 250px; height: auto;">
+                <p class="precio">$28.00</p>
+                <form action="agregar_carrito.php" method="POST">
+                    <input type="hidden" name="nombre" value="Mochila de Cuerdas Hayward">
+                    <input type="hidden" name="precio" value="28.00">
+                    <input type="hidden" name="imagen" value="mochila.jpg">
+                    <button type="submit" class="btn-comprar">Agregar al Carrito</button>
+                </form>
+            </div>
+
+            <div class="tarjeta">
+                <h3>Banda para Cabeza Swoosh</h3>
+                <img src="banda.jpg" alt="accesorio" style="width: 250px; height: auto;">
+                <p class="precio">$12.00</p>
+                <form action="agregar_carrito.php" method="POST">
+                    <input type="hidden" name="nombre" value="Banda para Cabeza Swoosh">
+                    <input type="hidden" name="precio" value="12.00">
+                    <input type="hidden" name="imagen" value="banda.jpg">
+                    <button type="submit" class="btn-comprar">Agregar al Carrito</button>
+                </form>
+            </div>
+
+            <div class="tarjeta">
+                <h3>Cinta Deportiva Pro</h3>
+                <img src="banda2.jpg" alt="accesorio" style="width: 250px; height: auto;">
+                <p class="precio">$15.00</p>
+                <form action="agregar_carrito.php" method="POST">
+                    <input type="hidden" name="nombre" value="Cinta Deportiva Pro">
+                    <input type="hidden" name="precio" value="15.00">
+                    <input type="hidden" name="imagen" value="banda2.jpg">
+                    <button type="submit" class="btn-comprar">Agregar al Carrito</button>
+                </form>
+            </div>
+
+            <div class="tarjeta">
+                <h3>Maletín de Gimnasio Utility</h3>
+                <img src="maleta.jpg" alt="accesorio" style="width: 250px; height: auto;">
+                <p class="precio">$60.00</p>
+                <form action="agregar_carrito.php" method="POST">
+                    <input type="hidden" name="nombre" value="Maletín de Gimnasio Utility">
+                    <input type="hidden" name="precio" value="60.00">
+                    <input type="hidden" name="imagen" value="maleta.jpg">
+                    <button type="submit" class="btn-comprar">Agregar al Carrito</button>
+                </form>
+            </div>
+
         </div>
     </main>
 
     <footer>
         <p><strong>Desarrollado por:</strong> Oscar Jahir Perez Munoz</p>
         <p><strong>Grupo:</strong> 5°I</p>
-        <p><strong>No. Control</strong> 0611</p>
+        <p><strong>No. Control:</strong> 0611</p>
     </footer>
 
 </body>
