@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Caffenio</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        header {
+            background-color: #E7C196;
+            color: white;
+            padding: 2rem 1rem;
+            text-align: center;
+        }
+
+        nav {
+            background-color: #6D3C1C;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+        }
+
+        nav ul li a {
+            color: #E7C196;
+            text-decoration: none;
+            padding: 1rem 1.5rem;
+            display: block;
+            transition: background 0.3s;
+        }
+
+        nav ul li a:hover {
+            background-color: #E7C196;
+        }
+
+        .contenido {
+            flex: 1;
+            max-width: 100px;
+            width: 100%;
+            margin: 100%;
+            padding: 0 1rem;
+            
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1.5rem;
+        }
+
+        section {
+            padding: 1.5rem;
+            background-color: #f7fafc;
+            border-radius: 8px;
+            border: 1px solid #e2e8f0;
+            text-align: center;
+        }
+
+        section h2 {
+            margin-bottom: 0.8rem;
+            color: #2b6cb0;
+            font-size: 1.1rem;
+        }
+
+        section img {
+            max-width: 100%;
+            height: 100%;
+            border-radius: 6px;
+        }
+
+        footer {
+            background-color: #6D3C1C;
+            color: white;
+            text-align: center;
+            padding: 1.5rem 1rem;
+            margin-top: auto;
+        }
+
+        @media (max-width: 768px) {
+            .contenido {
+                grid-template-columns: repeat(2, 1fr); 
+            }
+            nav ul {
+                flex-direction: column;
+                text-align: center;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Caffenio</h1>
+        <img src="caffenio.jpg" alt="logo de caffenio">
+        <p>Bienvenido a nuestra página web</p>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="registro.html">Registrate</a></li>
+            <li><a href="menu.html">Menu</a></li>
+        </ul>
+    </nav>
+    
+    <h2>Bienvenido a nuestra pagina web de Caffenio tenemos para ti los mejores caffes, frapes y muchas cosas mas!</h2>
+            <img src="varios.jpg" alt="Tipos de cafes">
+
+    <footer>
+       <p>Oscar Jahir Perez Munoz | 5°I | Programacion | 24308051280611</p>
+    </footer>
+
+</body>
+</html>
